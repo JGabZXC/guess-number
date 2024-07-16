@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+:root {
+    --fc-primary: #433D8B;
+    --fc-secondary: #2E236C;
+    --fc-tertiary: #F8EDE3;
+
+    --bg-color-primary: #17153B;
+    --bg-color-secondary: #C8ACD6;
+
+    --ff-primary: "Tiny5", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color-primary);
+    font-family: var(--ff-primary);
+    color: var(--fc-tertiary);
+}
+
+header {
+    background-color: var(--fc-secondary);
+}
+
+/* --------------------------- GENERAL --------------------------- */
+.container {
+    width: min(1000px, 95%);
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* --------------------------- HEADER --------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar>div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-con button {
+    font-family: var(--ff-primary);
+    padding: 0.50em 1.20em;
+    font-size: 1.10em;
+    text-transform: uppercase;
+}
+
+.navbar div:nth-child(2) p,
+.navbar div:nth-child(2) div>* {
+    font-family: var(--ff-primary);
+    font-size: 1.10em;
+}
+
+.navbar div:nth-child(2) div input,
+.navbar div:nth-child(2) div button {
+    padding: 2px;
+}
+
+.navbar div:nth-child(2) div input {
+    max-width: 100px;
+}
+
+/* --------------------------- MAIN --------------------------- */
+.game {
+    position: relative;
+    height: calc(100vh - 100px);
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.guess-number {
+
+    width: 15rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    font-size: 10rem !important;
+    background-color: #F8EDE3;
+    color: var(--fc-primary);
+}
+
+.user-i {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 80px;
+    height: calc(50%);
+}
+
+.con-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.con-left>* {
+    font-size: 2rem;
+    font-family: var(--ff-primary);
+}
+
+.con-right {
+    font-size: 2rem;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Guess Game</title>
+</head>
+
+<body>
+    <header>
+        <nav class="container navbar">
+            <div class="btn-con">
+                <button>Again</button>
+                <button>Reset</button>
+            </div>
+            <div>
+                <p>Guess (Between 1 - <span class="rounds">20)</span></p>
+                <div>
+                    <input type="number">
+                    <button>Change</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container game">
+                <div class="hero">
+                    <h1>Guess my Number!</h1>
+                    <p>Guess between 1 - 20</p>
+                    <p class="guess-number">?</p>
+                </div>
+                <div class="user-i">
+                    <div class="con-left">
+                        <input type="number" class="guess">
+                        <button class="check">Check</button>
+                    </div>
+                    <div class="con-right">
+                        <p class="message">Guess the number</p>
+                        <div>
+                            <p>Score: <span class="score">20</span></p>
+                            <p>Highscore: <span class="highscore">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
