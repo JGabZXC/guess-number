@@ -45,12 +45,6 @@ button {
     padding: 20px;
 }
 
-.navbar>div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
 .btn-con button {
     font-family: var(--ff-primary);
     padding: 0.50em 1.20em;
@@ -71,6 +65,60 @@ button {
 
 .navbar div:nth-child(2) div input {
     max-width: 100px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bars {
+    height: 5px;
+    width: 30px;
+    margin: 5px;
+    background-color: var(--fc-tertiary);
+    transition: all .75s;
+}
+
+@media (width <=768px) {
+    .hamburger {
+        display: block;
+        z-index: 10;
+    }
+
+    .list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        margin: 0 -30px;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        background-color: #17153B;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .75s;
+    }
+
+    .hamburger.active .bars:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bars:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
+    }
+
+    .hamburger.active .bars:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .list.active {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 /* --------------------------- MAIN --------------------------- */
@@ -129,7 +177,6 @@ button {
 @media (width <=768px) {
     .game {
         height: 100%;
-        outline: 2px solid green;
     }
 
     .user-i {
