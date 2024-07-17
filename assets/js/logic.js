@@ -95,5 +95,3 @@ reset.addEventListener("click", function () {
   message.textContent = "Guess the number";
   document.querySelector("body").style.backgroundColor = "#17153B";
 });
-
-console.log(rndNumber);

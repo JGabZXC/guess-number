@@ -170,6 +170,10 @@ button {
     font-family: var(--ff-primary);
 }
 
+.con-left .guess {
+    padding: 5px;
+}
+
 .con-right {
     font-size: 2rem;
 }
