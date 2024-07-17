@@ -48,7 +48,6 @@ let rndNumber = DefRound(defRound); // Default Round;
 Rounds(defRound); // Defaultt Round Text;
 
 check.addEventListener("click", function () {
-  console.log(rndNumber); // Debug
   guess = Number(document.querySelector(".guess").value);
   if (!guess) {
     displayMessage("No guess!");
