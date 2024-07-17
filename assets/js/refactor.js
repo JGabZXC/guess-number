@@ -2,7 +2,7 @@ let defRound = 20; // Default Round
 
 let rounds = document.querySelectorAll(".rounds"); // Text
 let guess = Number(document.querySelector(".guess").value); // Guess Value
-const guessNumber = Number(document.querySelector(".guess-number"));
+const guessNumber = document.querySelector(".guess-number");
 
 let highscore = document.querySelector(".highscore");
 let score = document.querySelector(".score");
@@ -54,7 +54,9 @@ check.addEventListener("click", function () {
   } else if (guess === rndNumber) {
     displayMessage("Correct!");
     body.style.backgroundColor = "#88D66C";
-
+    gameScore++;
+    Score(gameScore);
+    guessNumber.textContent = rndNumber;
     if (gameScore > gameHighscore) {
       gameHighscore = gameScore;
       Highscore(gameHighscore);
@@ -77,6 +79,7 @@ again.addEventListener("click", function () {
   displayMessage("Guess the number");
   body.style.backgroundColor = "#17153B";
   document.querySelector(".guess").value = "";
+  guessNumber.textContent = "?";
 });
 
 reset.addEventListener("click", function () {
@@ -90,6 +93,7 @@ reset.addEventListener("click", function () {
   Highscore(gameHighscore);
   document.querySelector(".guess").value = "";
   roundVal.value = "";
+  guessNumber.textContent = "?";
 });
 
 changeRndBtn.addEventListener("click", function () {
