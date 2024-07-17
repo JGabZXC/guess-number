@@ -69,6 +69,8 @@ check.addEventListener("click", function () {
     } else {
       displayMessage("You Lose!");
       Score("0");
+      guessNumber.textContent = rndNumber;
+      body.style.backgroundColor = "#FFAAAA";
     }
   }
 });
